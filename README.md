@@ -9,6 +9,7 @@ SO THAT I can spend the least amount of money on my trip
 
 ## Acceptance Criteria
 ```
+GIVEN I am a user who wants to travel using a pickup service
 WHEN I press the "Compare" button
 THEN I am presented with a modal to enter my start and end destinations
 THEN I am presented with the best price available after comparing Lyft and Uber's ride estimations
