@@ -1,10 +1,21 @@
+:root {
+    --blue: #a4b7d9;
+    --white: white;
+    --OswaldFont: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: #F2EBE9;
+}
+
+/* header */
 .headerPart-top {
-    background-color: #a4b7d9;
+    background-color: var(--blue);
     width: 350px;
     height: 586px;
-    color: white;
+    color: var(--white);
     position: relative;
-    font-family: 'Oswald', sans-serif;
+    font-family: var (--OswaldFont);
 }
 
 
@@ -24,7 +35,7 @@
 .headerPart-bottom {
     position: absolute;
     bottom: 0;
-    background-color: #4b4e53;
+    background-color: #243A73;
     text-align: center;
     height: 50%;
     font-family: 'Open Sans', sans-serif;
@@ -39,11 +50,16 @@
 }
 
 .headerButton {
-    background-color: #a4b7d9;
+    background-color: var(--blue);
     border-radius: 25px;
     padding: 15px 25px;
-    color: white;
+    font-weight: bolder;
+    color: var(--white);
     cursor: pointer;
+}
 
-
+/* modal */
+.modal-content {
+    background-color: #F2EBE9;
+    font-family: var (--OswaldFont);
 }
