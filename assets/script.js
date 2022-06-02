@@ -12,6 +12,7 @@ rideModal.addEventListener('show.bs.modal', event => {
     // Update the modal's start-point
 
     const modalBodyInput2 = exampleModal.querySelector('#start-point')
-    modalBodyInput2.value = start - Point;
+    modalBodyInput2.value = startPoint;
 })
+
 
