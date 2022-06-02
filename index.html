@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- link to css -->
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Ride Compare</title>
+</head>
+
+<body>
+    <!-- <link rel="stylesheet" type="text/css" href="https://ws1.postescanada-canadapost.ca/css/addresscomplete-2.30.min.css?key=au32-dm44-zk98-td61" />
+    <script type="text/javascript" src="https://ws1.postescanada-canadapost.ca/js/addresscomplete-2.30.min.js?key=au32-dm44-zk98-td61"></script> -->
+    <!-- header part -->
+    <header>
+        <div class="headerPart">
+            <div class="headerPart-top">
+                <h1>Ride Compare</h1>
+                <div class="headerPart-bottom">
+                    <h3>Let's help you find the best price for your ride!</h3>
+                    <button class='headerButton' type="button" data-bs-toggle="modal"
+                        data-bs-target="#rideModal">COMPARE PRICE</button>
+                </div>
+            </div>
+            <img class="headerPic" src="images/trip.jpg" alt="trip-pic">
+        </div>
+    </header>
+
+    <!-- modal part -->
+
+    <div class="modal fade" id="rideModal" tabindex="-1" aria-labelledby="rideModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rideModalLabel">Let's give you a ride!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="destination" class="col-form-label">Enter your destination:</label>
+                            <input class="form-control" id="destination">
+                        </div>
+                        <div class="mb-3">
+                            <label for="start-point" class="col-form-label">Enter your start point:</label>
+
+                            <input class="form-control" id="start-point">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="checkPrice">Check price</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+<!-- Bootsrap JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+<!-- link to JavaScript -->
+<script src="assets/script.js"></script>
+
+</html>
