@@ -4,17 +4,30 @@ rideModal.addEventListener('show.bs.modal', event => {
     // Button that triggered the modal
     const button = event.relatedTarget
 
-    // Update the modal's destination
+})
 
-    const modalBodyInput1 = exampleModal.querySelector('#destination')
-    modalBodyInput1.value = destination;
-    getLocationData(destination);
+//once checkPrice button is clicked, run fetch requests
 
-    // Update the modal's start-point
+let checkPriceButton = document.getElementById('checkPrice');
+checkPriceButton.addEventListener('click', function(event) {
 
-    const modalBodyInput2 = exampleModal.querySelector('#start-point')
-    modalBodyInput2.value = start - Point;
-    getLocationData();
+  //take destination from modal input
+
+  const modalBodyInput1 = document.querySelector('#destination')
+  const destination = modalBodyInput1.value;
+
+  // Update the modal's origin
+
+  const modalBodyInput2 = document.querySelector('#start-point')
+  const startPoint = modalBodyInput2.value;
+
+  let originLatLon = getLocationData(startPoint);
+
+  let destinationLatLon = getLocationData(destination);
+
+//call Lyft API using origin and destination data
+//Call Uber API using origin and destination data
+
 })
 
 //define search term, identified by user in modal
@@ -42,59 +55,16 @@ function getApi(requestUrl) {
   })
   }
 
-  getLocationData();
 
-  function getLocationData(searchLocation);
 
-  if (searchLocation === "") {
-      //need to chnage the below alert as alerts not allowed for project
-    alert("Please enter a valid address!")
-} else {
+  function getLocationData(searchLocation) {
+
+//   if (searchLocation === "") {
+//       //need to chnage the below alert as alerts not allowed for project
+//     alert("Please enter a valid address!")
+// } else {
  let requestUrl = "https://open.mapquestapi.com/geocoding/v1/address?key=hhrCIA8KyYUTDcwR5122SGvidu2ajGro&location=" + searchLocation;
-}
+//}
 getApi(requestUrl);
 
-// //validation through canada post
-
-Key = "YA99-KW37-DJ29-UH59";
-SearchTerm = modalBodyInput1.value;
-
-var url = 'http://ws1.postescanada-canadapost.ca/AddressComplete/Interactive/Find/v2.10/json3.ws';
-var params = '';
-    params += "&Key=" + encodeURIComponent(Key);
-    params += "&SearchTerm=" + encodeURIComponent(SearchTerm);
-    params += "&LastId=" + encodeURIComponent(LastId);
-    params += "&SearchFor=" + encodeURIComponent(SearchFor);
-    params += "&Country=" + encodeURIComponent(Country);
-    params += "&LanguagePreference=" + encodeURIComponent(LanguagePreference);
-    params += "&MaxSuggestions=" + encodeURIComponent(MaxSuggestions);
-    params += "&MaxResults=" + encodeURIComponent(MaxResults);
-var http = new XMLHttpRequest();
-http.open('POST', url, true);
-http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-http.onreadystatechange = function() {
-  if(http.readyState == 4 && http.status == 200) {
-      var response = JSON.parse(http.responseText);
-      // Test for an error
-      if (response.Items.length == 1 && typeof(response.Items[0].Error) != "undefined") {
-        // Show the error message
-        alert(response.Items[0].Description);
-      }
-      else {
-        // Check if there were any items found
-        if (response.Items.length == 0)
-            alert("Sorry, there were no results");
-        else {
-            // PUT YOUR CODE HERE
-            //FYI: The output is an array of key value pairs (e.g. response.Items[0].Id), the keys being:
-            //Id
-            //Text
-            //Highlight
-            //Cursor
-            //Description
-            //Next
-        }
-    }
   }
-}
-http.send(params);

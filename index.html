@@ -16,7 +16,8 @@
 </head>
 
 <body>
-    <link rel="stylesheet" type="text/css" href="https://ws1.postescanada-canadapost.ca/css/addresscomplete-2.30.min.css?key=au32-dm44-zk98-td61" /><script type="text/javascript" src="https://ws1.postescanada-canadapost.ca/js/addresscomplete-2.30.min.js?key=au32-dm44-zk98-td61"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="https://ws1.postescanada-canadapost.ca/css/addresscomplete-2.30.min.css?key=au32-dm44-zk98-td61" />
+    <script type="text/javascript" src="https://ws1.postescanada-canadapost.ca/js/addresscomplete-2.30.min.js?key=au32-dm44-zk98-td61"></script> -->
     <!-- header part -->
     <header>
         <div class="headerPart">
@@ -45,18 +46,18 @@
                     <form>
                         <div class="mb-3">
                             <label for="destination" class="col-form-label">Enter your destination:</label>
-                            <input type="text" class="form-control" id="destination" placeholder="destination">
+                            <input class="form-control" id="destination">
                         </div>
                         <div class="mb-3">
                             <label for="start-point" class="col-form-label">Enter your start point:</label>
 
-                            <input type="text" class="form-control" id="start-point" placeholder="start-point">
+                            <input class="form-control" id="start-point">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Check price</button>
+                    <button type="button" class="btn btn-primary" id="checkPrice">Check price</button>
                 </div>
             </div>
         </div>
