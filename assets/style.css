@@ -1,11 +1,12 @@
 :root {
     --blue: #a4b7d9;
-    --white: white;
+    --white: whitesmoke;
     --OswaldFont: 'Oswald', sans-serif;
 }
 
 body {
     background-color: #F2EBE9;
+    font-family: var (--OswaldFont);
 }
 
 /* header */
@@ -15,7 +16,7 @@ body {
     height: 586px;
     color: var(--white);
     position: relative;
-    font-family: var (--OswaldFont);
+
 }
 
 
@@ -85,9 +86,23 @@ body {
     left: 50px;
     background-color: rgb(246, 201, 53);
     border-radius: 25px;
-    padding: 15px 25px;
+    padding: 15px 50px;
     font-weight: bolder;
-    color: whitesmoke;
+
+
+}
+
+button a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--blue);
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    color: var(--white);
 
 }
 
