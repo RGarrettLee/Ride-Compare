@@ -124,7 +124,6 @@ function getApi(requestUrl) {
         //therefore if the below latitude and longitude are returned, there were no results for the search.
         let errorDisplay = document.getElementById("errorMessage")
         if (latlon == [39.78373, -100.445882]) {
-            //need to change the below alert as alerts not allowed for project
             errorDisplay.textContent ="No results found for this address.";
             return;
         } else {
