@@ -59,7 +59,9 @@ if (selectMenu.value === "Home") {
 
 //on page load, load saved data
 function init() {
+  if (savedAddresses != null) {
  savedAddresses = JSON.parse(localStorage.getItem("savedAddresses"));
+  }
 }
   
 //Run init on page load
