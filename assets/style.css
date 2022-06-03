@@ -105,3 +105,11 @@ footer {
     color: var(--white);
 
 }
+
+.error {
+    color: red;
+}
+
+.form-select {
+    width: 250px;
+}
