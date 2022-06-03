@@ -77,7 +77,7 @@ checkPriceButton.addEventListener('click', function (event) {
   if (destination === "") {
     errorDisplay2.textContent ="Please enter a valid address.";
   } else {
-    let destinationLatLon = getLocationData(destination);
+    let destinationLocation = getLocationData(destination);
   }
 
   // tka eorigin from modal input
@@ -88,7 +88,7 @@ checkPriceButton.addEventListener('click', function (event) {
     errorDisplay.textContent ="Please enter a valid address.";
  
  } else {
-    let originLatLon = getLocationData(startPoint);
+    let originLocation = getLocationData(startPoint);
 };
 
 //Get price and time estimates from Lyft
@@ -118,19 +118,25 @@ function getApi(requestUrl) {
     if (response.ok) {
       response.json().then(function (data) {
         console.log(data);
+        let location = {
+          street: data.results[0].locations[0].street,
+          city: data.results[0].locations[0].adminArea5,
+          country: data.results[0].locations[0].adminArea1,
+          postal_code: data.results[0].locations[0].postalCode
+        }
+
         let latlon = [data.results[0].locations[0].latLng.lat,data.results[0].locations[0].latLng.lng];
-        //check if search matched address; if not, call returns the below latitude and longitude by default.
+         //check if search matched address; if not, call returns the below latitude and longitude by default.
         //therefore if the below latitude and longitude are returned, there were no results for the search.
         let errorDisplay = document.getElementById("errorMessage")
         if (latlon == [39.78373, -100.445882]) {
 
-            //need to change the below alert as alerts not allowed for project
             errorDisplay.textContent ="No results found for this address.";
             return;
-          } else {
-            console.log(latlon);
-            return latlon;
-          }
+        } else {
+            console.log(location);
+            return location;
+
         }
       })
   }
