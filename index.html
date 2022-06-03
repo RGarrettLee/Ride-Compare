@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <!-- header part -->
     <header>
         <div class="headerPart">
@@ -43,31 +44,36 @@
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <label for="destination" class="col-form-label">Enter your destination:</label>
+                            <label for="start-point" class="col-form-label">Enter your starting location:</label>
 
-                            <input type="text" class="form-control" id="destination" placeholder="destination">
 
-                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">choose</button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">Home </a></li>
-                            </ul>
-
+                            <input type="text" class="form-control" id="start-point" placeholder="starting location">
+                            <select id="saved" class="form-select" aria-label="Default select example">
+                                <option selected>Or use a saved address</option>
+                                <option value="Home">Home</option>
+                                <option value="Work">Work</option>
+                              </select>
+                
                             <!-- save address modal -->
-                            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">save home address</button>
+                            <button class="btn btn-outline-secondary" id="saveAddress" type="button" 
+                                >Save current address</button>
+                                <button class="btn btn-outline-secondary" id="useSaved" type="button" 
+                                >Use saved address</button>
+                                <!--field for error message if no address entered-->
+                                <p id="errorMessage" class="error"></p>
                         </div>
+
                         <div class="mb-3">
-                            <label for="start-point" class="col-form-label">Enter your start point:</label>
-
-
-                            <input type="text" class="form-control" id="start-point" placeholder="start-point">
+                            <label for="destination" class="col-form-label">Enter your destination:</label>
+                            <input type="text" class="form-control" id="destination" placeholder="destination">
+                            <p id="errorMessage2" class="error"></p>
+                      
                         </div>
+
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
                     <button type="button" class="btn btn-primary" id="checkPrice">Check price</button>
                 </div>
             </div>
@@ -78,7 +84,7 @@
 
 </body>
 
-<!-- Bootsrap JavaScript Bundle with Popper -->
+<!-- Bootstrap JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
