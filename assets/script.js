@@ -11,6 +11,7 @@ let useAddressButton = document.getElementById('useSaved');
 // modal showup 
 const rideModal = document.getElementById('rideModal')
 rideModal.addEventListener('show.bs.modal', event => {
+
     // Button that triggered the modal
     const button = event.relatedTarget;
 })
@@ -35,6 +36,7 @@ if (selectMenu.value === "Home") {
   errorDisplay.textContent ="Please select a tag from the dropdown.";
 }
 })
+
 
 //UseAddress button is clicked
 useAddressButton.addEventListener('click', function(event) {
@@ -66,7 +68,7 @@ init();
 //once checkPrice button is clicked, run fetch requests
 
 let checkPriceButton = document.getElementById('checkPrice');
-checkPriceButton.addEventListener('click', function(event) {
+checkPriceButton.addEventListener('click', function (event) {
 
   //take destination from modal input
   const modalBodyInput1 = document.querySelector('#destination');
@@ -81,6 +83,7 @@ checkPriceButton.addEventListener('click', function(event) {
   // tka eorigin from modal input
   const modalBodyInput2 = document.querySelector('#start-point');
   const startPoint = modalBodyInput2.value;
+
  if (startPoint === "") {
     errorDisplay.textContent ="Please enter a valid address.";
  
@@ -96,6 +99,7 @@ getUberCosts(priginLatLon, destinationLatLon);
 //call Lyft API using origin and destination data
 //Call Uber API using origin and destination data
 
+
 /*output info to results page for each service including
 -distance
 -(UBER) high + low estimates (numbers), estimate (string)
@@ -107,8 +111,10 @@ error code built into UBER's API, if distance<100 miles, HTTP status 422*/
 })
 
 function getApi(requestUrl) {
-    fetch(requestUrl)
+  fetch(requestUrl)
     .then(function (response) {
+
+
     if (response.ok) {
       response.json().then(function (data) {
         console.log(data);
@@ -117,20 +123,25 @@ function getApi(requestUrl) {
         //therefore if the below latitude and longitude are returned, there were no results for the search.
         let errorDisplay = document.getElementById("errorMessage")
         if (latlon == [39.78373, -100.445882]) {
+
             //need to change the below alert as alerts not allowed for project
             errorDisplay.textContent ="No results found for this address.";
             return;
-        } else {
+          } else {
             console.log(latlon);
             return latlon;
+          }
         }
       })
   }
   })
   }
 
+
 function getLocationData(searchLocation) {
+
 
   let requestUrl = "https://open.mapquestapi.com/geocoding/v1/address?key=hhrCIA8KyYUTDcwR5122SGvidu2ajGro&location=" + searchLocation;
   getApi(requestUrl);
 };
+
