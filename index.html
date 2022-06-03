@@ -50,20 +50,20 @@
                         <div class="mb-3">
 
 
-                            <label for="start-point" class="col-form-label"><i class="fas fa-map-marked-alt">Enter your starting location:</label>
+                            <label for="start-point" class="col-form-label">Enter your starting location:</label>
 
 
-                            <input type="text" class="form-control" id="start-point" placeholder="starting location">
+                            <i class="fas fa-map-marked-alt"></i><input type="text" class="form-control" id="start-point" placeholder="starting location">
                             <select id="saved" class="form-select" aria-label="Default select example">
                                 <option selected>Or use a saved address</option>
                                 <option value="Home">Home</option>
                                 <option value="Work">Work</option>
                               </select>
-                
+
                             <!-- save address modal -->
-                            <button class="btn btn-outline-secondary" id="saveAddress" type="button" 
+                            <button class="btn btn-outline-secondary" id="saveAddress" type="button"
                                 >Save current address</button>
-                                <button class="btn btn-outline-secondary" id="useSaved" type="button" 
+                                <button class="btn btn-outline-secondary" id="useSaved" type="button"
                                 >Use saved address</button>
                                 <!--field for error message if no address entered-->
                                 <p id="errorMessage" class="error"></p>
@@ -71,10 +71,10 @@
 
 
                         <div class="mb-3">
-                            <label for="destination" class="col-form-label"> <i class="fas fa-car"></i>Enter your destination:</label>
-                            <input type="text" class="form-control" id="destination" placeholder="destination">
+                            <label for="destination" class="col-form-label"> Enter your destination:</label>
+                            <i class="fas fa-car"></i><input type="text" class="form-control" id="destination" placeholder="destination">
                             <p id="errorMessage2" class="error"></p>
-                      
+
                         </div>
 
                     </form>
