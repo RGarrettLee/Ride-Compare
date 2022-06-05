@@ -93,7 +93,7 @@ checkPriceButton.addEventListener('click', function (event) {
 
   } else {
     originLocation = getLocationData(startPoint, 'origin');
-    console.log(post);
+    postData();
   };
 
   //Get price and time estimates from Lyft
@@ -114,6 +114,23 @@ checkPriceButton.addEventListener('click', function (event) {
 
   error code built into UBER's API, if distance<100 miles, HTTP status 422*/
 })
+
+function postData() {
+  let backend = 'https://d979-142-185-241-49.ngrok.io';
+  let settings = {
+    "url": backend,
+    "method": "POST",
+    "timeout": 0,
+    "headers": {
+      "Content-Type": 'application/json'
+    },
+    "data": JSON.stringify(post),
+  };
+
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  })
+}
 
 function getApi(requestUrl, type) {
   fetch(requestUrl)
