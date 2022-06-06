@@ -2,7 +2,7 @@
 
 ## A website to use to compare prices between ride sharing apps
 
-Have you every used Uber or Lyft and thought to yourself, "This seems so expensive for this ride, I wonder if can use another app to save money?" Well, you've come to the right place.
+Have you ever used Uber or Lyft and thought to yourself, "This seems so expensive for this ride, I wonder if can use another app to save money?" Well, you've come to the right place.
 
 Due to the nature of ride sharing services, they will have surge pricing which means the price of a ride can drastically vary between different apps and services.
 
