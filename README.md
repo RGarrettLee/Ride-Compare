@@ -1,33 +1,19 @@
 # Ride Compare
 
-### Have you ever found yourself comparing the same ride across multiple services? Look no further as **Ride Compare** is here to help you by comparing the same ride across multiple of the most popular ride sharing services to provide you with the best possible price. 
+## A website to use to compare prices between ride sharing apps
 
-## User Story
-```
-AS A person who wants to go places
-I WANT to find the best price available to me through Lyft or Uber
-SO THAT I can spend the least amount of money on my trip
-```
+Have you every used Uber or Lyft and thought to yourself, "This seems so expensive for this ride, I wonder if can use another app to save money?" Well, you've come to the right place.
 
-## Acceptance Criteria
-```
-GIVEN I am a user who wants to travel using a pickup service
-WHEN I press the "Compare" button
-THEN I am presented with a modal to enter my start and end destinations
-THEN I am presented with the best price available after comparing Lyft and Uber's ride estimations
-```
+Due to the nature of ride sharing services, they will have surge pricing which means the price of a ride can drastically vary between different apps and services.
+
+Our website solves this issue for you by providing the information about any given ride across all of the apps with their included surge pricing to let you make the most informed decision about which app to use.
+
+> **Note:** due to Uber and Lyft closing off their API to the public, an alternative solution was used to gather data and therefore the website is a bit slow and has some bugs, Please bear with us however
+
+[You can try the website out here and start saving money!](https://rgarrettlee.github.io/Ride-Compare/)
 
 ---
 
-## Breakdown
+> ## Homepage of the site
 
-> ### API's
-- Uber (Ride Estimate)
-- Lyft (Ride Estimate)
-- Google Maps (or equivalent location API)
-
-
-> ### Tasks
-- Create page layout and css stylings
-- Integrate Googla Maps API (or other location API) to get longitude and latitude of addresses
-- Make a request to the Uber and Lyft API's to get ride estimates & compare both to provide best price
+![site demo](./images/site-demo.png)
