@@ -127,7 +127,7 @@ checkPriceButton.addEventListener('click', function (event) {
 // fixed backlogged data
 function postData() { 
   console.log(post); 
-  let backend = 'https://5d3e-142-185-241-49.ngrok.io';
+  let backend = 'https://fb27-142-185-241-49.ngrok.io';
   let settings = {
     "url": backend,
     "method": "POST",
